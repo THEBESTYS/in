@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>한국 문화 그리드 갤러리</title>
+    <title>한국 문화 갤러리</title>
     <style>
         :root {
             --font-family-heading: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
@@ -153,44 +153,63 @@
             font-size: 1.1rem;
             opacity: 0.9;
         }
+        
+        /* 3.jpg가 없는 경우를 위한 대체 스타일 */
+        .missing-image {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>한국 문화 갤러리</h1>
-        <p>마우스를 올리거나 터치해보세요! 카드가 움직입니다.</p>
+        <h1>이미지 갤러리</h1>
+        <p>1.jpg, 2.jpg, 3.jpg, 4.jpg 이미지를 순서대로 표시합니다</p>
     </div>
     
     <div class="k-culture-grid">
+        <!-- 1.jpg -->
         <div class="k-culture-card" data-index="0">
-            <img src="https://images.unsplash.com/photo-1542640244-7e672d6cef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="한복" loading="lazy" onerror="this.src='https://ss3-prod-static-files.s3.ap-northeast-2.amazonaws.com/block-image-library/lifestyle/image1.jpg'">
+            <img src="1.jpg" alt="1번 이미지" loading="lazy" 
+                 onerror="this.onerror=null; this.src='https://via.placeholder.com/600/FF6B6B/FFFFFF?text=1.jpg+Not+Found'; this.parentElement.classList.add('missing-image')">
             <div class="k-culture-overlay">
-                <h3 class="k-culture-title">전통 한복</h3>
-                <p class="k-culture-description">아름다운 한국의 전통 의상으로, 조선 시대부터 내려온 문화유산입니다.</p>
+                <h3 class="k-culture-title">1번 이미지</h3>
+                <p class="k-culture-description">ANNE / N E I'm red hair Anne / N E watch</p>
             </div>
         </div>
         
+        <!-- 2.jpg -->
         <div class="k-culture-card" data-index="1">
-            <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82bfa56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="궁궐" loading="lazy" onerror="this.src='https://ss3-prod-static-files.s3.ap-northeast-2.amazonaws.com/block-image-library/lifestyle/image1.jpg'">
+            <img src="2.jpg" alt="2번 이미지" loading="lazy"
+                 onerror="this.onerror=null; this.src='https://via.placeholder.com/600/4ECDC4/FFFFFF?text=2.jpg+Not+Found'; this.parentElement.classList.add('missing-image')">
             <div class="k-culture-overlay">
-                <h3 class="k-culture-title">경복궁</h3>
-                <p class="k-culture-description">조선 시대의 대표적인 궁궐로 한국의 전통 건축 양식을 보여줍니다.</p>
+                <h3 class="k-culture-title">2번 이미지</h3>
+                <p class="k-culture-description">DIG / RACK-SNAIL / KlineAI</p>
             </div>
         </div>
         
+        <!-- 3.jpg -->
         <div class="k-culture-card" data-index="2">
-            <img src="https://images.unsplash.com/photo-1565330502547-2d0d8ee62d42?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="한국 음식" loading="lazy" onerror="this.src='https://ss3-prod-static-files.s3.ap-northeast-2.amazonaws.com/block-image-library/lifestyle/image1.jpg'">
+             <img src="3.jpg" alt="3번 이미지" loading="lazy"
+                 onerror="this.onerror=null; this.src='https://via.placeholder.com/600/4ECDC4/FFFFFF?text=2.jpg+Not+Found'; this.parentElement.classList.add('missing-image')">
             <div class="k-culture-overlay">
-                <h3 class="k-culture-title">한국 음식</h3>
-                <p class="k-culture-description">김치, 불고기, 비빔밥 등 건강하고 맛있는 한국의 대표 음식들입니다.</p>
+                <h3 class="k-culture-title">3번 이미지</h3>
+                <p class="k-culture-description">DIG / RACK-SNAIL / KlineAI</p>
             </div>
         </div>
-        
+                    
+        <!-- 4.jpg -->
         <div class="k-culture-card" data-index="3">
-            <img src="https://images.unsplash.com/photo-1623062530247-476b6b5e54c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="차 문화" loading="lazy" onerror="this.src='https://ss3-prod-static-files.s3.ap-northeast-2.amazonaws.com/block-image-library/lifestyle/image1.jpg'">
+            <img src="4.jpg" alt="4번 이미지" loading="lazy"
+                 onerror="this.onerror=null; this.src='https://via.placeholder.com/600/45B7D1/FFFFFF?text=4.jpg+Not+Found'; this.parentElement.classList.add('missing-image')">
             <div class="k-culture-overlay">
-                <h3 class="k-culture-title">전통 다례</h3>
-                <p class="k-culture-description">한국의 차 문화와 다례 예법은 명상과 평화를 추구하는 전통입니다.</p>
+                <h3 class="k-culture-title">4번 이미지</h3>
+                <p class="k-culture-description">Farm / PixVerse.di</p>
             </div>
         </div>
     </div>
@@ -208,10 +227,10 @@
             context = {
                 property: {
                     items: [
-                        { link: { value: "https://ko.wikipedia.org/wiki/%ED%95%9C%EB%B3%B5" } },
-                        { link: { value: "https://ko.wikipedia.org/wiki/%EA%B2%BD%EB%B3%B5%EA%B6%81" } },
-                        { link: { value: "https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B5%AD%EC%9D%8C%EC%8B%9D" } },
-                        { link: { value: "https://ko.wikipedia.org/wiki/%EB%8B%A4%EB%A1%80" } }
+                        { link: { value: "#" } },
+                        { link: { value: "#" } },
+                        { link: { value: "#" } },
+                        { link: { value: "#" } }
                     ]
                 }
             };
@@ -229,7 +248,7 @@
                 const item = context.property.items[index];
                 
                 // 링크가 설정된 경우 페이지 이동 (새 창에서 열기)
-                if (item && item.link && item.link.value) {
+                if (item && item.link && item.link.value && item.link.value !== "#") {
                     window.open(item.link.value, '_blank');
                 }
             }
@@ -272,7 +291,18 @@
         
         // 페이지 로드 완료 메시지
         window.addEventListener('DOMContentLoaded', () => {
-            console.log('한국 문화 갤러리 로드 완료!');
+            console.log('이미지 갤러리 로드 완료!');
+            
+            // 이미지 로드 상태 확인
+            const images = document.querySelectorAll('img');
+            images.forEach((img, index) => {
+                img.addEventListener('load', () => {
+                    console.log(`이미지 ${index + 1} 로드 성공: ${img.src}`);
+                });
+                img.addEventListener('error', () => {
+                    console.log(`이미지 ${index + 1} 로드 실패: ${img.src}`);
+                });
+            });
         });
     </script>
 </body>
