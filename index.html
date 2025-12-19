@@ -3,127 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>한국 문화 갤러리</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>한국 문화 그리드 갤러리</title>
     <style>
-        /* CSS 변수 정의 */
         :root {
-            --font-family-heading: 'Pretendard', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-            --font-family-body: 'Pretendard', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            --font-family-heading: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            --font-family-body: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
             --font-weight-heading: 700;
             --font-weight-body: 400;
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: var(--font-family-body);
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding: 30px 20px;
-            background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
-            color: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .header h1 {
-            font-family: var(--font-family-heading);
-            font-weight: var(--font-weight-heading);
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-            letter-spacing: 2px;
-        }
-        
-        .header p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            opacity: 0.9;
-        }
-        
-        .github-link {
-            display: inline-block;
-            margin-top: 20px;
-            background-color: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .github-link:hover {
-            background-color: white;
-            color: #ff6b6b;
-            transform: translateY(-3px);
-        }
-        
-        .github-link i {
-            margin-right: 8px;
-        }
-        
-        .instructions {
-            max-width: 1000px;
-            margin: 0 auto 40px;
-            background-color: white;
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .instructions h2 {
-            color: #ff6b6b;
-            margin-bottom: 15px;
-            font-family: var(--font-family-heading);
-        }
-        
-        .instructions p {
-            margin-bottom: 15px;
-        }
-        
-        .instructions ul {
-            padding-left: 20px;
-            margin-bottom: 15px;
-        }
-        
-        .instructions li {
-            margin-bottom: 8px;
-        }
-        
-        .code-block {
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #4ecdc4;
-            font-family: monospace;
-            margin-top: 15px;
-            overflow-x: auto;
-        }
-        
-        /* 한국 문화 그리드 스타일 */
         .k-culture-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 30px;
             padding: 40px 60px;
-            background: #ffffff;
-            max-width: 1200px;
-            margin: 0 auto;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            background: #f8f9fa;
         }
 
         .k-culture-card {
@@ -216,14 +110,6 @@
 
         /* 모바일 반응형 */
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
-            
-            .header p {
-                font-size: 1rem;
-            }
-            
             .k-culture-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -243,114 +129,98 @@
             }
         }
         
-        .footer {
+        body {
+            margin: 0;
+            font-family: var(--font-family-body);
+            background: white;
+        }
+        
+        .header {
             text-align: center;
-            margin-top: 50px;
-            padding: 20px;
-            color: #666;
-            font-size: 0.9rem;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .header h1 {
+            margin: 0 0 15px 0;
+            font-size: 2.5rem;
+        }
+        
+        .header p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            opacity: 0.9;
         }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>한국 문화 갤러리</h1>
-        <p>아름다운 한국의 문화와 전통을 담은 인터랙티브 이미지 갤러리입니다. 카드를 클릭하거나 터치해보세요!</p>
-        <a href="https://github.com" class="github-link" target="_blank">
-            <i class="fab fa-github"></i> GitHub에서 보기
-        </a>
+        <p>마우스를 올리거나 터치해보세요! 카드가 움직입니다.</p>
     </div>
     
-    <div class="instructions">
-        <h2>사용 방법</h2>
-        <p>이 HTML 파일은 독립적으로 작동하는 한국 문화 갤러리 웹사이트입니다. 아래와 같은 기능을 제공합니다:</p>
-        <ul>
-            <li>반응형 디자인: 데스크톱과 모바일 모두 최적화</li>
-            <li>인터랙티브 카드: 호버 시 3D 변환 효과</li>
-            <li>터치 지원: 모바일에서 터치 인터랙션 지원</li>
-            <li>성능 최적화: 이미지 지연 로딩(lazy loading)</li>
-        </ul>
-        <p>GitHub에 업로드하기: 이 파일을 <strong>index.html</strong>로 저장한 후 GitHub 저장소에 업로드하세요.</p>
-        <div class="code-block">
-            # GitHub에 업로드하는 방법<br>
-            1. GitHub 저장소 생성<br>
-            2. index.html 파일 업로드<br>
-            3. GitHub Pages 설정에서 소스 브랜치 선택<br>
-            4. https://[사용자명].github.io/[저장소명] 으로 접속
-        </div>
-    </div>
-    
-    <!-- 한국 문화 갤러리 -->
     <div class="k-culture-grid">
         <div class="k-culture-card" data-index="0">
-            <img src="https://images.unsplash.com/photo-1542640244-7e672d6cef4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="한복" loading="lazy" onerror="this.src='https://ss3-prod-static-files.s3.ap-northeast-2.amazonaws.com/block-image-library/lifestyle/image1.jpg'">
+            <img src="https://images.unsplash.com/photo-1542640244-7e672d6cef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="한복" loading="lazy" onerror="this.src='https://ss3-prod-static-files.s3.ap-northeast-2.amazonaws.com/block-image-library/lifestyle/image1.jpg'">
             <div class="k-culture-overlay">
-                <h3 class="k-culture-title">한복</h3>
-                <p class="k-culture-description">한국의 전통 의상으로, 아름다운 색상과 선이 특징입니다. 조선 시대부터 내려온 한국의 대표적인 문화유산입니다.</p>
+                <h3 class="k-culture-title">전통 한복</h3>
+                <p class="k-culture-description">아름다운 한국의 전통 의상으로, 조선 시대부터 내려온 문화유산입니다.</p>
             </div>
         </div>
         
         <div class="k-culture-card" data-index="1">
-            <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82bfa56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="궁궐" loading="lazy" onerror="this.src='https://ss3-prod-static-files.s3.ap-northeast-2.amazonaws.com/block-image-library/lifestyle/image1.jpg'">
+            <img src="https://images.unsplash.com/photo-1515168833906-d2a3b82bfa56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="궁궐" loading="lazy" onerror="this.src='https://ss3-prod-static-files.s3.ap-northeast-2.amazonaws.com/block-image-library/lifestyle/image1.jpg'">
             <div class="k-culture-overlay">
                 <h3 class="k-culture-title">경복궁</h3>
-                <p class="k-culture-description">조선 시대의 대표적인 궁궐로, 한국의 전통 건축 양식을 보여줍니다. 광화문과 경회루가 특히 유명합니다.</p>
+                <p class="k-culture-description">조선 시대의 대표적인 궁궐로 한국의 전통 건축 양식을 보여줍니다.</p>
             </div>
         </div>
         
         <div class="k-culture-card" data-index="2">
-            <img src="https://images.unsplash.com/photo-1565330502547-2d0d8ee62d42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="한국 음식" loading="lazy" onerror="this.src='https://ss3-prod-static-files.s3.ap-northeast-2.amazonaws.com/block-image-library/lifestyle/image1.jpg'">
+            <img src="https://images.unsplash.com/photo-1565330502547-2d0d8ee62d42?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="한국 음식" loading="lazy" onerror="this.src='https://ss3-prod-static-files.s3.ap-northeast-2.amazonaws.com/block-image-library/lifestyle/image1.jpg'">
             <div class="k-culture-overlay">
                 <h3 class="k-culture-title">한국 음식</h3>
-                <p class="k-culture-description">김치, 불고기, 비빔밥 등 다양한 한국 전통 음식은 건강하고 맛있는 특징으로 전 세계적으로 사랑받고 있습니다.</p>
+                <p class="k-culture-description">김치, 불고기, 비빔밥 등 건강하고 맛있는 한국의 대표 음식들입니다.</p>
             </div>
         </div>
         
         <div class="k-culture-card" data-index="3">
-            <img src="https://images.unsplash.com/photo-1623062530247-476b6b5e54c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="한국 차 문화" loading="lazy" onerror="this.src='https://ss3-prod-static-files.s3.ap-northeast-2.amazonaws.com/block-image-library/lifestyle/image1.jpg'">
+            <img src="https://images.unsplash.com/photo-1623062530247-476b6b5e54c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="차 문화" loading="lazy" onerror="this.src='https://ss3-prod-static-files.s3.ap-northeast-2.amazonaws.com/block-image-library/lifestyle/image1.jpg'">
             <div class="k-culture-overlay">
-                <h3 class="k-culture-title">차 문화</h3>
-                <p class="k-culture-description">한국의 전통 다례는 차를 마시는 예법으로, 조용한 명상과 함께 마음의 평화를 찾는 문화입니다.</p>
+                <h3 class="k-culture-title">전통 다례</h3>
+                <p class="k-culture-description">한국의 차 문화와 다례 예법은 명상과 평화를 추구하는 전통입니다.</p>
             </div>
         </div>
     </div>
-    
-    <div class="footer">
-        <p>© 2023 한국 문화 갤러리. 모든 이미지는 Unsplash에서 제공됩니다.</p>
-        <p>이 페이지는 GitHub Pages 호스팅을 위해 제작되었습니다.</p>
-    </div>
 
     <script>
-        // bm 객체 모킹 (원래 코드와의 호환성을 위해)
-        const bm = {
-            container: document.body,
-            context: {
+        // bm 객체가 없는 경우를 대비한 처리
+        let container, context;
+        
+        if (typeof bm !== 'undefined') {
+            container = bm.container;
+            context = bm.context;
+        } else {
+            // bm 객체가 없으면 기본값 사용
+            container = document.body;
+            context = {
                 property: {
                     items: [
-                        {
-                            link: { value: "https://ko.wikipedia.org/wiki/%ED%95%9C%EB%B3%B5" }
-                        },
-                        {
-                            link: { value: "https://ko.wikipedia.org/wiki/%EA%B2%BD%EB%B3%B5%EA%B6%81" }
-                        },
-                        {
-                            link: { value: "https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B5%AD%EC%9D%8C%EC%8B%9D" }
-                        },
-                        {
-                            link: { value: "https://ko.wikipedia.org/wiki/%EB%8B%A4%EB%A1%80" }
-                        }
+                        { link: { value: "https://ko.wikipedia.org/wiki/%ED%95%9C%EB%B3%B5" } },
+                        { link: { value: "https://ko.wikipedia.org/wiki/%EA%B2%BD%EB%B3%B5%EA%B6%81" } },
+                        { link: { value: "https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B5%AD%EC%9D%8C%EC%8B%9D" } },
+                        { link: { value: "https://ko.wikipedia.org/wiki/%EB%8B%A4%EB%A1%80" } }
                     ]
                 }
-            }
-        };
-
-        const container = bm.container;
-        const context = bm.context;
+            };
+        }
 
         let activeCard = null;
 
         // 카드 클릭/터치 이벤트 처리
-        container.addEventListener('click', (e) => {
+        document.addEventListener('click', (e) => {
             e.preventDefault();
             
             const card = e.target.closest('.k-culture-card');
@@ -358,21 +228,15 @@
                 const index = parseInt(card.getAttribute('data-index'));
                 const item = context.property.items[index];
                 
-                // 링크가 설정된 경우 페이지 이동
+                // 링크가 설정된 경우 페이지 이동 (새 창에서 열기)
                 if (item && item.link && item.link.value) {
                     window.open(item.link.value, '_blank');
                 }
-                
-                // 클릭 시 활성화 효과 추가 (모바일용)
-                card.classList.add('active');
-                setTimeout(() => {
-                    card.classList.remove('active');
-                }, 500);
             }
         }, true);
 
         // 터치 디바이스용 인터랙션
-        container.addEventListener('touchstart', (e) => {
+        document.addEventListener('touchstart', (e) => {
             const card = e.target.closest('.k-culture-card');
             if (card) {
                 // 이전 활성 카드 제거
@@ -387,7 +251,7 @@
         }, { passive: true });
 
         // 터치 종료 시 효과 제거 (딜레이 추가)
-        container.addEventListener('touchend', (e) => {
+        document.addEventListener('touchend', (e) => {
             const card = e.target.closest('.k-culture-card');
             if (card) {
                 setTimeout(() => {
@@ -398,7 +262,7 @@
         }, { passive: true });
 
         // 터치 취소 시 효과 제거
-        container.addEventListener('touchcancel', (e) => {
+        document.addEventListener('touchcancel', (e) => {
             const card = e.target.closest('.k-culture-card');
             if (card) {
                 card.classList.remove('active');
@@ -406,10 +270,9 @@
             }
         }, { passive: true });
         
-        // 페이지 로드 시 설명 추가
-        document.addEventListener('DOMContentLoaded', function() {
+        // 페이지 로드 완료 메시지
+        window.addEventListener('DOMContentLoaded', () => {
             console.log('한국 문화 갤러리 로드 완료!');
-            console.log('카드를 클릭하거나 터치해보세요!');
         });
     </script>
 </body>
